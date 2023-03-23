@@ -1,0 +1,110 @@
+@use "./utilities/colors" as c;
+@use "./utilities/animations" as a;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	background-color: c.$bg-color;
+}
+
+.wrapper {
+	height: 100vh;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.card {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 16em;
+	height: 350px;
+	border-radius: 12px;
+	background-color: c.$main-color;
+	transform: translate(-50%, -50%);
+
+	&-title {
+		position: absolute;
+		top: 30px;
+		width: 100%;
+		text-align: center;
+	}
+
+	.result-container {
+		position: absolute;
+		top: 80px;
+		left: 50px;
+
+		&-text {
+			margin-bottom: 5px;
+		}
+
+		textarea {
+			min-width: 150px;
+			max-width: 150px;
+			min-height: 30px;
+			max-height: 30px;
+		}
+	}
+	.settings {
+		position: absolute;
+		top: 150px;
+		left: 65px;
+
+		.setting {
+			margin: 5px;
+
+			label {
+				display: inline-block;
+				width: 90px;
+			}
+		}
+	}
+
+	.generate {
+		position: absolute;
+		bottom: 35px;
+		left: 50px;
+		width: 150px;
+		height: 40px;
+		background-color: c.$btn-color;
+		border: transparent;
+		border-radius: 8px;
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 2px;
+		cursor: pointer;
+		overflow: hidden;
+
+		&::before,
+		&::after {
+			position: absolute;
+			top: -20px;
+			left: -50px;
+			content: "";
+			background-color: c.$btn-hover;
+			height: 100px;
+			width: 40px;
+			transform: rotate(-30deg);
+		}
+		&::after {
+			width: 5px;
+		}
+
+		&:hover::before,
+		&:hover::after {
+			animation: glass 2s;
+		}
+
+		&:hover::after {
+			animation-delay: 0.2s;
+		}
+	}
+}

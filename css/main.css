@@ -1,0 +1,103 @@
+@keyframes glass {
+  from {
+    left: -50px;
+  }
+  to {
+    left: 180px;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #FFF2CC;
+}
+
+.wrapper {
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 16em;
+  height: 350px;
+  border-radius: 12px;
+  background-color: #e4c568;
+  transform: translate(-50%, -50%);
+}
+.card-title {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  text-align: center;
+}
+.card .result-container {
+  position: absolute;
+  top: 80px;
+  left: 50px;
+}
+.card .result-container-text {
+  margin-bottom: 5px;
+}
+.card .result-container textarea {
+  min-width: 150px;
+  max-width: 150px;
+  min-height: 30px;
+  max-height: 30px;
+}
+.card .settings {
+  position: absolute;
+  top: 150px;
+  left: 65px;
+}
+.card .settings .setting {
+  margin: 5px;
+}
+.card .settings .setting label {
+  display: inline-block;
+  width: 90px;
+}
+.card .generate {
+  position: absolute;
+  bottom: 35px;
+  left: 50px;
+  width: 150px;
+  height: 40px;
+  background-color: #cc773f;
+  border: transparent;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.card .generate::before, .card .generate::after {
+  position: absolute;
+  top: -20px;
+  left: -50px;
+  content: "";
+  background-color: rgba(214, 152, 110, 0.4196078431);
+  height: 100px;
+  width: 40px;
+  transform: rotate(-30deg);
+}
+.card .generate::after {
+  width: 5px;
+}
+.card .generate:hover::before, .card .generate:hover::after {
+  animation: glass 2s;
+}
+.card .generate:hover::after {
+  animation-delay: 0.2s;
+}/*# sourceMappingURL=main.css.map */

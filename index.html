@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Password Generator</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="card">
+				<h3 class="card-title">Password Generator</h3>
+				<div class="result-container">
+					<p class="result-container-text">Your new password:</p>
+					<textarea id="PassResult"></textarea>
+				</div>
+				<div class="settings">
+					<div class="setting">
+						<label>Uppercase</label>
+						<input type="checkbox" class="uppercase" />
+					</div>
+					<div class="setting">
+						<label>Lowercase</label>
+						<input type="checkbox" class="lowercase" />
+					</div>
+					<div class="setting">
+						<label>Numbers</label>
+						<input type="checkbox" class="numbers" />
+					</div>
+					<div class="setting">
+						<label>Checkbox</label>
+						<input type="checkbox" class="symbols" />
+					</div>
+				</div>
+				<button class="generate"><p class="btn-text">generate</p></button>
+			</div>
+		</div>
+
+		<script src="./js/script.js"></script>
+	</body>
+</html>
