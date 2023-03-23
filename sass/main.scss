@@ -24,11 +24,12 @@ body {
 	position: relative;
 	top: 50%;
 	left: 50%;
-	width: 16em;
+	width: 250px;
 	height: 350px;
 	border-radius: 12px;
 	background-color: c.$main-color;
 	transform: translate(-50%, -50%);
+	box-shadow: 0 3px 10px rgb(0,0,0,.6);
 
 	&-title {
 		position: absolute;
@@ -39,7 +40,7 @@ body {
 
 	.result-container {
 		position: absolute;
-		top: 80px;
+		top: 70px;
 		left: 50px;
 
 		&-text {
@@ -47,30 +48,39 @@ body {
 		}
 
 		textarea {
-			min-width: 150px;
-			max-width: 150px;
-			min-height: 30px;
-			max-height: 30px;
+			background-color: c.$bg-color;
+			border:none;
+			width: 150px;
+			height: 30px;
+			font-size: 24px;
+			resize: none;
 		}
 	}
 	.settings {
 		position: absolute;
-		top: 150px;
-		left: 65px;
+		top: 130px;
+		left: 45px;
 
 		.setting {
 			margin: 5px;
 
+			.slider{
+			width: 150px;
+			}
+			.checkbox{
+				padding-left: 20px;
+			}
+
 			label {
 				display: inline-block;
-				width: 90px;
+				width: 100px;
 			}
 		}
 	}
 
 	.generate {
 		position: absolute;
-		bottom: 35px;
+		bottom: 25px;
 		left: 50px;
 		width: 150px;
 		height: 40px;

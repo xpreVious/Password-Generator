@@ -18,27 +18,31 @@
 				<h3 class="card-title">Password Generator</h3>
 				<div class="result-container">
 					<p class="result-container-text">Your new password:</p>
-					<textarea id="PassResult"></textarea>
+					<textarea id="passResult"></textarea>
 				</div>
 				<div class="settings">
 					<div class="setting">
-						<label>Uppercase</label>
+						<p>Password length: <span class="passLength"></span></p>
+						<input type="range"	min="1" max="10" value="5" class="slider" id="myRange">
+					</div>
+					<div class="setting">
+						<label class="checkbox">Uppercase</label>
 						<input type="checkbox" class="uppercase" />
 					</div>
 					<div class="setting">
-						<label>Lowercase</label>
+						<label class="checkbox">Lowercase</label>
 						<input type="checkbox" class="lowercase" />
 					</div>
 					<div class="setting">
-						<label>Numbers</label>
+						<label class="checkbox">Numbers</label>
 						<input type="checkbox" class="numbers" />
 					</div>
 					<div class="setting">
-						<label>Checkbox</label>
+						<label class="checkbox">Symbols</label>
 						<input type="checkbox" class="symbols" />
 					</div>
 				</div>
-				<button class="generate"><p class="btn-text">generate</p></button>
+				<button class="generate">generate</button>
 			</div>
 		</div>
 
