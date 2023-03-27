@@ -44,17 +44,25 @@ body {
 }
 .card .result-container {
   position: absolute;
-  top: 70px;
-  left: 50px;
+  top: 50px;
+  left: 40px;
+}
+.card .result-container-error {
+  opacity: 0;
+  margin-top: 5px;
+  color: red;
 }
 .card .result-container-text {
+  margin-left: 10px;
   margin-bottom: 5px;
 }
-.card .result-container textarea {
-  background-color: #FFF2CC;
-  border: none;
+.card .result-container #passResult {
+  margin-left: 10px;
+  padding: 0 5px;
   width: 150px;
   height: 30px;
+  background-color: #FFF2CC;
+  border: none;
   font-size: 24px;
   resize: none;
 }

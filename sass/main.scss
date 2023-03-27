@@ -40,18 +40,27 @@ body {
 
 	.result-container {
 		position: absolute;
-		top: 70px;
-		left: 50px;
+		top: 50px;
+		left: 40px;
+
+		&-error{
+			opacity: 0;
+			margin-top: 5px;
+			color: red;
+		}
 
 		&-text {
+			margin-left: 10px;
 			margin-bottom: 5px;
 		}
 
-		textarea {
-			background-color: c.$bg-color;
-			border:none;
+		#passResult {
+			margin-left: 10px;
+			padding: 0 5px;
 			width: 150px;
 			height: 30px;
+			background-color: c.$bg-color;
+			border:none;
 			font-size: 24px;
 			resize: none;
 		}
